@@ -1,0 +1,35 @@
+body {
+  background-color: rgb(225, 225, 225);
+  font-family: "Muli", sans-serif;
+}
+
+ul.pagination {
+  display: flex;
+  list-style: none;
+  box-shadow: 4px 4px 4px #0000002e, -4px -4px 4px white;
+  padding: 0;
+  max-width: 360px;
+}
+
+ul.pagination li {
+  background-color: rgb(225, 225, 225);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid rgba(59, 59, 59, 0.527);
+  cursor: pointer;
+}
+ul.pagination li:last-child {
+  border-right: none;
+}
+
+ul.pagination li:hover {
+  background-color: rgb(206, 206, 206);
+}
+
+ul.pagination li a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.747);
+}

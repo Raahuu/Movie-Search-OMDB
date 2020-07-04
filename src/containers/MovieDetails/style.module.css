@@ -1,0 +1,47 @@
+.main_screen {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(225, 225, 225);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.neumophic {
+  border: transparent;
+  box-shadow: 4px 4px 4px #0000002e, -4px -4px 3px white;
+  background-color: rgb(225, 225, 225);
+}
+
+.movie_details {
+  background-color: rgb(225, 225, 225);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  width: 40%;
+  height: 80%;
+  overflow: auto;
+  padding: 20px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 24px;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.plot {
+  width: 75%;
+  text-align: justify;
+}
+
+.poster {
+  width: 50%;
+  height: 300px;
+}
+
+.year {
+}

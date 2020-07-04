@@ -1,14 +1,20 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
+import { NotificationContainer } from "react-notifications";
 
-import Test from "../containers/Test";
+import SearchSection from "../containers/SearchSection";
+import MovieDetails from "../containers/MovieDetails";
 
 const AllRoutes = () => {
   return (
-    <Switch>
-      <Route path="/test" exact component={Test} />
-      <Route path="/" render={() => <h2>Boiler plate Home</h2>} />
-    </Switch>
+    <>
+      <Switch>
+        <Route path="/search" component={SearchSection} />
+        <Route path="/movie/:imdbID/:name" component={MovieDetails} />
+        <Redirect path="/" to="/search" />
+      </Switch>
+      <NotificationContainer />
+    </>
   );
 };
 

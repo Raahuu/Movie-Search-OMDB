@@ -1,0 +1,59 @@
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 32px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.flexColumn {
+  flex-direction: column;
+}
+
+.neumophic {
+  border: transparent;
+  box-shadow: 4px 4px 4px #0000002e, -4px -4px 3px white;
+  background-color: rgb(225, 225, 225);
+}
+
+.form_holder {
+  height: 90px;
+}
+
+.input_box {
+  height: 50%;
+  border-radius: 25px;
+  padding: 0 25px;
+  outline: none;
+  margin: 10px;
+}
+
+.search_box {
+  width: 40%;
+}
+
+.dropdown {
+  width: 100px;
+  padding-right: 10px !important;
+}
+select {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  color: #00000091;
+}
+
+.submit_button {
+  height: 40px;
+  padding: 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  outline: none;
+  font-size: 14px;
+  color: rgb(76, 28, 248);
+  margin: 10px;
+}

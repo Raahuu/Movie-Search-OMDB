@@ -1,7 +1,8 @@
 import { all } from "redux-saga/effects";
 
-import test from "./test/saga";
+import search from "./search/saga";
+import movie from "./movie/saga";
 
 export default function* rootSaga() {
-  yield all([test()]); //yield all([test(), test1(), test2()]);
+  yield all([search(), movie()]);
 }
