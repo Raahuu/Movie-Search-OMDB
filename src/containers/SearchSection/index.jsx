@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
@@ -14,7 +14,7 @@ const SearchSection = (props) => {
   const history = useHistory();
   const dispatch = useDispatch();
 
-  const cardData = useSelector((state) => state.SearchResults.data);
+  const cardData = useSelector((state) => state.SearchResults.data.cardsToShow);
   const loading = useSelector((state) => state.SearchResults.fetching);
 
   const handleChange = (event, title) => {
@@ -49,6 +49,12 @@ const SearchSection = (props) => {
       });
     }
   };
+
+  useEffect(() => {
+    if (cardData.length) {
+      dispatch({ type: "RESET" });
+    }
+  }, [searchText, searchType]);
 
   return (
     <div className={`${styles.flexColumn}`}>
@@ -95,6 +101,8 @@ const SearchSection = (props) => {
         </div>
       ) : (
         <CardDisplay
+          searchText={searchText}
+          searchType={searchType}
           selectedMovie={(id) =>
             dispatch({ type: "SELECT_MOVIE", payload: { id, history } })
           }

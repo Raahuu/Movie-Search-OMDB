@@ -7,13 +7,22 @@ import styles from "./style.module.css";
 import { useSelector, useDispatch } from "react-redux";
 
 const CardDisplay = (props) => {
-  const [activePage, setActivePage] = useState(1);
-  const totalItemsCount = useSelector((state) => state.SearchResults.itemCount);
+  const totalItemsCount = useSelector((state) =>
+    Number(state.SearchResults.itemCount)
+  );
+  const activePage = useSelector((state) => state.SearchResults.activePage);
   const dispatch = useDispatch();
 
-  const handlePageChange = (pageNumber) => {
-    setActivePage(pageNumber);
-    dispatch({ type: "PAGINATION_TRIGGER", pageNumber });
+  const handlePageChange = async (pageNumber) => {
+    dispatch({ type: "SET_ACTIVE_PAGE", pageNumber });
+    dispatch({
+      type: "PAGINATION_TRIGGER",
+      payload: {
+        pageNumber,
+        searchText: props.searchText,
+        searchType: props.searchType,
+      },
+    });
   };
 
   return (

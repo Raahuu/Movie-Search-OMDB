@@ -29,6 +29,11 @@ ul.pagination li:hover {
   background-color: rgb(206, 206, 206);
 }
 
+ul.pagination li.active {
+  /* box-shadow: inset 3px 3px 4px #00000059, 4px 4px 4px black; */
+  background-color: rgb(172, 172, 172);
+}
+
 ul.pagination li a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.747);

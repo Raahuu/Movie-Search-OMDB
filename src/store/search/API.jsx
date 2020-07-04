@@ -5,6 +5,7 @@ export const searchMovieAPI = (payload) => {
     params: {
       s: payload.searchText,
       ...(payload.searchType ? { type: payload.searchType } : {}),
+      ...(payload.pageNumber ? { page: payload.pageNumber } : {}),
     },
   });
 };
