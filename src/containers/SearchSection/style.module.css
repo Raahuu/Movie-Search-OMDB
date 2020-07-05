@@ -37,10 +37,10 @@
 }
 
 .dropdown {
-  width: 100px;
-  padding-right: 10px !important;
+  width: 7%;
 }
 select {
+  width: 50px;
   border: none;
   background-color: transparent;
   outline: none;

@@ -19,7 +19,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
   width: 40%;
   height: 80%;
   overflow: auto;
@@ -43,5 +42,24 @@
   height: 300px;
 }
 
-.year {
+@media screen and (max-width: 1250px) {
+  .movie_details {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .movie_details {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .movie_details {
+    width: 80%;
+  }
+  .poster {
+    width: 70%;
+    height: 300px;
+  }
 }
